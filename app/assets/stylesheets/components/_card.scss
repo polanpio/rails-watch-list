@@ -1,0 +1,60 @@
+.card-list {
+  background-color: #1f2c3c;
+  height: 180px;
+  width: 300px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: acb3b9;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.card-movie {
+  background-color: #1f2c3c;
+  height: 210px;
+  width: 330px;
+  padding: 20px;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: acb3b9;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  position: relative;
+}
+
+.card-movie img {
+  width: 300px;
+  height: 180px;
+  object-fit: cover;
+}
+
+.movie-info {
+  background-color: #1f2c3c;
+  font-size: 16px;
+  width: 450px;
+  z-index: 1;
+  position: absolute;
+  left: 300px;
+  padding: 20px;
+  border-radius: 0 5px 5px 0;
+}
+
+.movie-title,
+.movie-raing {
+  font-size: 26px;
+}
+
+
+
+

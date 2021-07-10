@@ -9,11 +9,13 @@
     </div>
   </div>
 <div>
-    <% @list.movies.each do |movie| %>
-      <%= image_tag movie.poster_url, alt: movie.title, class: 'movie-img rounded-top' %>
-      <div>
-        <%= movie.title %> <span class="text-muted">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span>
-        <small class="text-muted"><%= movie.overview %></small>
-      </div>
-    <% end %>
+  <% @list.movies.each do |movie| %>
+  <div class="card-movie">
+    <%= image_tag movie.poster_url, alt: movie.title%>
+    <div class="movie-info">
+      <span class="movie-title"><%= movie.title %></span> <span class="text-muted movie-rating">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span>
+      <small class="text-muted"><%= movie.overview %></small>
+    </div>
   </div>
+  <% end %>
+</div>
