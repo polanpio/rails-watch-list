@@ -1,0 +1,19 @@
+<h1><%= @list.name %></h1>
+<span class="movie-tag"><%= pluralize(@list.movies.size, 'movie') %></span>
+<div>
+  <div>
+    <small><em class="text-muted"><%= "You haven't saved any movies yet!" if @list.movies.empty? %></em></small>
+    <div>
+      <%= link_to 'add a movie', new_list_bookmark_path(@list) %>
+      <%= link_to 'delete this list', list_path(@list), method: :delete, class: 'btn btn-cancel', data: { confirm: 'Are you sure you want to delete this list?' } %>
+    </div>
+  </div>
+<div>
+    <% @list.movies.each do |movie| %>
+      <%= image_tag movie.poster_url, alt: movie.title, class: 'movie-img rounded-top' %>
+      <div>
+        <%= movie.title %> <span class="text-muted">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span>
+        <small class="text-muted"><%= movie.overview %></small>
+      </div>
+    <% end %>
+  </div>
