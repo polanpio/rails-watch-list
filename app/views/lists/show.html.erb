@@ -13,8 +13,12 @@
   <div class="card-movie">
     <%= image_tag movie.poster_url, alt: movie.title%>
     <div class="movie-info">
-      <span class="movie-title"><%= movie.title %></span> <span class="text-muted movie-rating">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span>
-      <small class="text-muted"><%= movie.overview %></small>
+      <div class="info-main">
+        <span class="movie-title"><%= movie.title %></span> <span class="movie-rating">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span>
+      </div>
+      <p>
+        <small class="text-muted"><%= movie.overview %></small>
+      </p>
     </div>
   </div>
   <% end %>

@@ -24,7 +24,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: acb3b9;
   font-size: 24px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
@@ -40,19 +39,32 @@
 }
 
 .movie-info {
+  color: #acb3b9;
   background-color: #1f2c3c;
   font-size: 16px;
+  height: 170px;
   width: 450px;
   z-index: 1;
   position: absolute;
   left: 300px;
-  padding: 20px;
+  padding: 10px 20px;
   border-radius: 0 5px 5px 0;
 }
 
-.movie-title,
-.movie-raing {
-  font-size: 26px;
+.info-main {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
+.movie-title {
+  font-size: 32px;
+  margin-right: 10px;
+}
+
+.movie-rating {
+  color: #ff6c30;
+  font-size: 18px;
 }
 
 
