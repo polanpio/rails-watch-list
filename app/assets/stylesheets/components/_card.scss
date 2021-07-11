@@ -30,6 +30,7 @@
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   position: relative;
+  cursor: pointer;
 }
 
 .card-movie img {
@@ -60,6 +61,7 @@
 .movie-title {
   font-size: 32px;
   margin-right: 10px;
+  max-width: 300px;
 }
 
 .movie-rating {
@@ -67,6 +69,68 @@
   font-size: 18px;
 }
 
+.list-name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
+.list-name h1 {
+  font-size: 48px;
+  color: #acb3b9;
+  font-weight: bold;
+}
 
+.list-name i {
+  font-size: 40px;
+}
+
+.custom-container {
+  margin: 0 20px;
+  padding: 16px;
+}
+
+.movies-wrapper {
+  display: flex;
+}
+
+.left-column {
+  flex: 60%;
+}
+
+.right-column {
+  flex: 40%;
+}
+
+.movies-count {
+  color: #acb3b9;
+  padding: 10px;
+  font-size: 26px;
+}
+
+.delete-list-btn {
+  font-size: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.movie-details-wrapper {
+  width: 500px;
+  height: 500px;
+  background-color: #1f2c3c;
+  margin: 20px;
+  padding: 20px;
+  display: none;
+  position: fixed;
+}
+
+.movie-details-wrapper.active {
+  display: block;
+}
+
+.movie-details-wrapper img {
+  width: 460px;
+  object-fit: cover;
+}
 

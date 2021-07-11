@@ -16,3 +16,11 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import 'bootstrap';
+
+import { displayDetailedCard } from "../components/card";
+import { trimmingOverview } from "../components/card"
+
+document.addEventListener('turbolinks:load', () => {
+  displayDetailedCard();
+  trimmingOverview();
+})
