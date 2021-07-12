@@ -75,7 +75,9 @@
   align-items: center;
 }
 
-.list-name h1 {
+.list-name h1,
+.flat-form h1,
+.new-bookmark-form h1 {
   font-size: 48px;
   color: #acb3b9;
   font-weight: bold;
@@ -134,3 +136,42 @@
   object-fit: cover;
 }
 
+.new-list-form {
+  height: 300px;
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #1f2c3c;
+  font-size: 24px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.new-list-form label {
+  color: #acb3b9;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.new-list-form input {
+  margin-bottom: 60px;
+}
+
+.input-field-list {
+  background-color: #0e1824;
+  color: #acb3b9;
+}
+
+.new-bookmark-form {
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.new-bookmark-form span {
+  color: #ff6c30;
+}
+
+.new-bookmark-form label {
+  color: #acb3b9;
+}

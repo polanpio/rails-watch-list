@@ -3,7 +3,7 @@ const displayDetailedCard = () => {
   const movieDetailsWrapper = document.querySelector(".movie-details-wrapper");
   cards.forEach((card) => {
     card.addEventListener("click", () => {
-      movieDetailsWrapper.classList.add("active");
+      movieDetailsWrapper.classList.toggle("active");
     })
     // card.addEventListener("click", () => {
     //   cards.forEach((card) => {
