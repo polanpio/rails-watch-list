@@ -16,7 +16,7 @@
   <div class="movies-wrapper">
     <div class="left-column">
       <% @list.movies.each do |movie| %>
-        <div class="card-movie">
+        <div class="card-movie" data-card-movie="<%= movie.to_json %>">
           <%= image_tag movie.poster_url, alt: movie.title%>
           <div class="movie-info">
             <div class="info-main">
@@ -31,12 +31,10 @@
     </div>
     <div class="right-column">
       <div class="movie-details-wrapper">
-          <%# current_movie = @list.movies[0]
-          image_tag current_movie.poster_url %>
-        <h3>Title</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum provident id consequuntur ducimus eaque, sed dignissimos assumenda, aliquam sequi autem maxime voluptas praesentium enim esse aut repellat veniam minus facere?</p>
+        <h3 id="movie-title"></h3>
+        <p id="movie-overview"></p>
         <div class="d-flex justify-content-between">
-          <p>raiting 5.32</p>
+          <p id="movie-rating">raiting 5.32</p>
           <p>2000-23-1</p>
           <p>language: JP</p>
         </div>

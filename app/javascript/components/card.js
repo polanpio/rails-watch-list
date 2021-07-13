@@ -1,18 +1,15 @@
 const displayDetailedCard = () => {
+  const movieTitle = document.getElementById("movie-title");
+  const movieOverview = document.getElementById("movie-overview");
   const cards = document.querySelectorAll(".card-movie");
   const movieDetailsWrapper = document.querySelector(".movie-details-wrapper");
   cards.forEach((card) => {
-    card.addEventListener("click", () => {
-      movieDetailsWrapper.classList.toggle("active");
+    card.addEventListener("click", (e) => {
+      const movieObject = JSON.parse(e.currentTarget.dataset.cardMovie)
+      movieDetailsWrapper.className = "movie-details-wrapper active";
+      movieTitle.innerText = movieObject.title;
+      movieOverview.innerText = movieObject.overview;
     })
-    // card.addEventListener("click", () => {
-    //   cards.forEach((card) => {
-    //     if (card.classList.contains("active")) {
-    //       card.classList.remove("active");
-    //     }
-    //   })
-    //   card.classList.add('active');
-    // })
   })
 }
 
