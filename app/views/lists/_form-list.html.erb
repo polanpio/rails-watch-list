@@ -2,6 +2,7 @@
   <%= f.input :name %>
   <div class="d-flex justify-content-between">
     <%= link_to 'Cancel', lists_path, class: 'btn btn-outline-danger my-2 my-sm-0' %>
+    <%= f.input :thumbnail, as: :file, input_html: {class: 'btn btn-primary'}%>
     <%= f.submit class: 'btn btn-outline-primary my-2 my-sm-0' %>
   </div>
 <% end %>
