@@ -37,6 +37,7 @@ group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end
 
+gem 'cloudinary', '~> 1.16.0'
 gem 'dotenv-rails', groups: %i[development test]
 
 group :development do
