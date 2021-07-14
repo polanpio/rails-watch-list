@@ -16,17 +16,12 @@ url = 'http://tmdb.lewagon.com/movie/top_rated'
       title: movie['title'],
       overview: movie['overview'],
       poster_url: "#{base_poster_url}#{movie['backdrop_path']}",
-      rating: movie['vote_average']
+      rating: movie['vote_average'],
+      release_date: movie['release_date'],
+      original_language: movie['original_language'],
+      original_title: movie['original_title'],
+      vote_count: movie['vote_count']
     )
   end
 end
 puts 'Created movies'
-
-# def movie_detail(loc_movie)
-#   detail_data = JSON.parse(RestClient.get("https://api.themoviedb.org/3/movie/#{loc_movie}?api_key=#{ENV['MOVIE_API']}"))
-#   edit_movie = Movie.find_by(movie_id: loc_movie)
-#   edit_movie.budget = detail_data['budget']
-#   edit_movie.tagline = detail_data['tagline']
-#   edit_movie.runtime = detail_data['runtime']
-#   edit_movie.save
-# end
