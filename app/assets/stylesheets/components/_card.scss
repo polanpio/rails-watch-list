@@ -1,14 +1,14 @@
 .card-list {
   background-color: #1f2c3c;
-  height: 180px;
-  width: 300px;
+  height: 280px;
+  width: 520px;
   padding: 20px;
   margin: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: acb3b9;
-  font-size: 24px;
+  font-size: 32px;
   font-weight: bold;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
@@ -37,6 +37,7 @@
   width: 300px;
   height: 180px;
   object-fit: cover;
+  border-radius: 5px;
 }
 
 .movie-info {
@@ -119,12 +120,14 @@
 
 .movie-details-wrapper {
   width: 500px;
-  height: 500px;
+  height: 650px;
   background-color: #1f2c3c;
   margin: 20px;
   padding: 20px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   display: none;
-  position: fixed;
 }
 
 .movie-details-wrapper.active {
@@ -134,6 +137,37 @@
 .movie-details-wrapper img {
   width: 460px;
   object-fit: cover;
+  border-radius: 5px;
+}
+
+.movie-details-wrapper {
+  color: #acb3b9;
+}
+
+#movie-poster {
+  margin-bottom: 15px;
+}
+
+#movie-original-title {
+  font-size: 18px;
+}
+
+#movie-title,
+#movie-rating,
+#movie-original-language,
+#movie-release-date {
+  font-weight: bold;
+}
+
+#movie-title {
+  font-size: 32px;
+  color: #ff6c30;
+}
+
+.movie-data-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .new-list-form {
@@ -166,6 +200,11 @@
 .new-bookmark-form {
   margin-top: 20px;
   padding: 20px;
+  height: 450px;
+  background-color: #1f2c3c;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .new-bookmark-form span {
