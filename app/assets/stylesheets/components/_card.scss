@@ -13,6 +13,8 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  background-size: cover;
+  background-position: center;
 }
 
 .card-movie {
@@ -63,11 +65,18 @@
   font-size: 32px;
   margin-right: 10px;
   max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .movie-rating {
   color: #ff6c30;
   font-size: 18px;
+}
+
+.movie-text-bottom p {
+  margin: 0;
 }
 
 .list-name {
@@ -120,7 +129,6 @@
 
 .movie-details-wrapper {
   width: 500px;
-  height: 650px;
   background-color: #1f2c3c;
   margin: 20px;
   padding: 20px;
@@ -131,7 +139,10 @@
 }
 
 .movie-details-wrapper.active {
-  display: block;
+  position: sticky;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .movie-details-wrapper img {
@@ -150,6 +161,10 @@
 
 #movie-original-title {
   font-size: 18px;
+}
+
+#movie-original-title span {
+  font-weight: bold;
 }
 
 #movie-title,
@@ -171,7 +186,6 @@
 }
 
 .new-list-form {
-  height: 300px;
   margin-top: 50px;
   padding: 20px;
   background-color: #1f2c3c;
@@ -186,10 +200,7 @@
   color: #acb3b9;
   font-size: 1rem;
   font-weight: 400;
-}
-
-.new-list-form input {
-  margin-bottom: 60px;
+  border-radius: 5px;
 }
 
 .input-field-list {
@@ -197,10 +208,42 @@
   color: #acb3b9;
 }
 
+.form-control {
+  border-radius: 5px;
+}
+
+.choose_file{
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: calc(1.5em + 0.75rem + 2px);
+  padding: 0.375rem 0.75rem;
+  border-radius: 5px;
+  border:#ebebeb solid 1px;
+  width: 250px;
+  font: normal 14px Myriad Pro, Verdana, Geneva, sans-serif;
+  color: #7f7f7f;
+  background:white;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.choose_file span {
+  cursor: pointer;
+}
+
+.choose_file input[type="file"]{
+  -webkit-appearance:none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
 .new-bookmark-form {
   margin-top: 20px;
   padding: 20px;
-  height: 450px;
   background-color: #1f2c3c;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
@@ -213,4 +256,40 @@
 
 .new-bookmark-form label {
   color: #acb3b9;
+}
+
+.neon-wrapper {
+  padding: 20px;
+  margin: 20px;
+}
+
+.neon-wrapper h2 {
+  position: relative;
+  font-size: 6em;
+  letter-spacing: 15px;
+  color: #0e3742;
+  text-transform: uppercase;
+  width: 100%;
+  text-align: center;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
+  line-height: 0.7em;
+  outline: none;
+  animation: neon 5s linear infinite;
+}
+
+@keyframes neon {
+  0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%
+  {
+    color: #88391a;
+    text-shadow: none;
+  }
+  18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%
+  {
+    color: #fff;
+    text-shadow: 0 0 10px #ff6c30,
+    0 0 20px #ff6c30,
+    0 0 40px #ff6c30,
+    0 0 80px #ff6c30,
+    0 0 160px #ff6c30,
+  }
 }

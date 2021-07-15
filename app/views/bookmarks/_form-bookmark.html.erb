@@ -1,6 +1,8 @@
 <%= simple_form_for [@list, @bookmark] do |f| %>
   <%= f.association :movie, collection: Movie.all.order(:title), prompt: 'Select a movie', input_html: { class: 'select2' } %>
   <%= f.input :comment, placeholder: 'Enter a comment about the movie' %>
-  <%= link_to "Cancel", list_path(@list), class: 'btn btn-outline-primary my-2 my-sm-0' %>
-  <%= f.submit 'Add movie', class: 'btn btn-outline-primary my-2 my-sm-0' %>
+  <div class="d-flex justify-content-between">
+    <%= link_to "Cancel", list_path(@list), class: 'btn btn-outline-danger my-2 my-sm-0' %>
+    <%= f.submit 'Add movie', class: 'btn btn-outline-primary my-2 my-sm-0' %>
+  </div>
 <% end %>

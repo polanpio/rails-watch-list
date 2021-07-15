@@ -1,13 +1,16 @@
+<div class="neon-wrapper">
+  <h2>Watchlists</h2>
+</div>
 <div class="container">
   <div class="row">
     <% @lists.each do |list| %>
         <%= link_to list_path(list), class:'text-decoration-none' do %>
         <% if list.thumbnail.attached? %>
-          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.thumbnail.key, height: 180, crop: :fill %>')">
+          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= cl_image_path list.thumbnail.key%>')">
             <%= list.name %>
           </div>
         <% else %>
-          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= asset_path 'default-thumbnail.jpg', height: 180, crop: :fill %>')">
+          <div class="card-list" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('<%= asset_path 'default-thumbnail.jpg'%>')">
             <%= list.name %>
           </div>
         <% end %>

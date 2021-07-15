@@ -6,13 +6,8 @@ const displayDetailedCard = () => {
   const movieReleaseDate = document.getElementById("movie-release-date");
   const movieOriginalLanguage = document.getElementById("movie-original-language");
   const moviePoster = document.getElementById("movie-poster");
-  console.log(moviePoster)
   const cards = document.querySelectorAll(".card-movie");
   const movieDetailsWrapper = document.querySelector(".movie-details-wrapper");
-  console.log(movieRating);
-  console.log(movieReleaseDate);
-  console.log(movieOriginalTitle);
-  console.log(movieOriginalLanguage);
   cards.forEach((card) => {
     card.addEventListener("click", (e) => {
       const movieObject = JSON.parse(e.currentTarget.dataset.cardMovie)
@@ -22,7 +17,7 @@ const displayDetailedCard = () => {
       movieTitle.innerText = movieObject.title;
       movieOverview.innerText = movieObject.overview;
       movieRating.innerText = `Rating: ${movieObject.rating}`;
-      movieOriginalTitle.innerText = `Original title: ${movieObject.original_title}`;
+      movieOriginalTitle.innerHTML = `<span>Original title:</span> ${movieObject.original_title}`;
       movieReleaseDate.innerText = movieObject.release_date;
       movieOriginalLanguage.innerText = `Language: ${movieObject.original_language}`;
     })
@@ -32,8 +27,8 @@ const displayDetailedCard = () => {
 const trimmingOverview = () => {
   const cardsParagraphs = document.querySelectorAll('.movie-info p small');
   cardsParagraphs.forEach(cardsParagraph => {
-    if (cardsParagraph.innerText.length > 80) {
-      cardsParagraph.innerText = `${cardsParagraph.innerText.substring(0, 80)}...`
+    if (cardsParagraph.innerText.length > 150) {
+      cardsParagraph.innerText = `${cardsParagraph.innerText.substring(0, 150)}...`
     }
   })
 }
