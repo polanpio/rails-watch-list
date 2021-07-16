@@ -140,6 +140,7 @@
 
 .movie-details-wrapper.active {
   position: sticky;
+  top: 85px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -264,6 +265,7 @@
 }
 
 .neon-wrapper h2 {
+  margin: 40px 0;
   position: relative;
   font-size: 6em;
   letter-spacing: 15px;

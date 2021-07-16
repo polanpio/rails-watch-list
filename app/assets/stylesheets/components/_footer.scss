@@ -1,0 +1,50 @@
+footer {
+  padding: 0.5rem 1rem;
+  background-color: #1f2c3c;
+  margin-top: 40px;
+}
+
+footer p {
+  color: #acb3b9;
+  margin: 0;
+  padding: 10px 0;
+  margin-right: 30px;
+}
+
+footer p span {
+  color: #ff6c30;
+}
+
+.footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-links .social-link {
+  margin-right: 15px;
+}
+
+.social-links .social-link i {
+  font-size: 26px;
+  color: #ff6c30;
+  transition: .3s linear;
+}
+
+.social-links .social-link #facebook:hover {
+  color: #3B5998;
+}
+
+.social-links .social-link #linkedin:hover {
+  color: #007bb5;
+}
+
+.social-links .social-link #github:hover {
+  color: #333;
+}
