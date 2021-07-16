@@ -16,11 +16,15 @@
   <div class="movies-wrapper">
     <div class="left-column">
       <% @list.movies.each do |movie| %>
+      <% bookmark = Bookmark.find_by(list: @list, movie: movie) %>
         <div class="card-movie" data-card-movie="<%= movie.to_json %>">
           <%= image_tag movie.poster_url, alt: movie.title%>
           <div class="movie-info">
             <div class="info-main">
               <span class="movie-title"><%= movie.title %></span> <span class="movie-rating">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span>
+              <small class="text-right flex-shrink-0"><%= link_to bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure you want to remove #{movie.title} from your #{@list.name} list"}, class: 'text-primary' do %></small>
+                <i class="fas fa-trash-alt"></i>
+              <% end %>
             </div>
             <p>
               <small class="text-muted"><%= movie.overview %></small>

@@ -59,6 +59,13 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  position: relative;
+}
+
+.info-main a {
+  position: absolute;
+  left: 98%;
+  top: -10%;
 }
 
 .movie-title {

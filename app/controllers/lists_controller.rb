@@ -17,7 +17,6 @@ class ListsController < ApplicationController
     @list = List.new(list_params)
     if @list.save
       redirect_to root_path
-      # redirect_to list_path(@list)
     else
       render :new
     end
