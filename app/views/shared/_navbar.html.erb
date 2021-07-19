@@ -4,6 +4,14 @@
     <%= link_to 'Watchlist', root_path, class: 'navbar-brand' %>
   </div>
   <div class="d-flex">
+    <div>
+      <%= form_tag movies_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          placeholder: "Find a movie", class: "p-2 pr-5"%>
+        <%= submit_tag "Search", class: "btn-red-opposite" %>
+      <% end %>
+    </div>
     <% if defined?(@list) && @list[:id] %>
       <div class="d-flex">
         <%= link_to 'Delete List', list_path(@list), method: :delete, class: 'btn btn-outline-danger my-2 my-sm-0 ml-2', data: { confirm: 'Are you sure you want to delete this list?' } %>

@@ -1,0 +1,42 @@
+<div class="row m-3">
+  <div class="col">
+    <div class="my-5 searched-movies">
+      <% if @query %>
+        <h1>You searched for "<span><strong><%= @query %></strong></span>"<br>We found <span><strong> <%= @movies.count == 1 ? "1 movie" : "#{@movies.count} movies" %></strong></span> out of <%= Movie.count %> from our database.</h1>
+        <div class="movies-wrapper">
+          <div class="left-column">
+            <% @movies.each do |movie| %>
+              <div class="card-movie" data-card-movie="<%= movie.to_json %>">
+                <%= image_tag movie.poster_url, alt: movie.title%>
+                <div class="movie-info">
+                  <div class="info-main">
+                    <span class="movie-title"><%= movie.title %></span> <span class="movie-rating">• <%= movie.rating %> <i class="fas fa-star star-yellow"></i></span>
+                  </div>
+                  <p>
+                    <small class="text-muted"><%= movie.overview %></small>
+                  </p>
+                </div>
+              </div>
+              <% end %>
+          </div>
+          <div class="right-column">
+            <div class="movie-details-wrapper">
+              <div class="movie-text">
+                <img id="movie-poster" src="" alt="movie-title">
+                <h3 id="movie-title"></h3>
+                <h4 id="movie-original-title"></h4>
+                <p id="movie-overview"></p>
+              </div>
+              <div class="d-flex justify-content-between movie-text-bottom">
+                <p id="movie-rating"></p>
+                <p id="movie-release-date"></p>
+                <p id="movie-original-language"></p>
+              </div>
+            </div>
+        </div>
+      <% else %>
+        <h1>All <%= Movie.count %> movies</h1>
+      <% end %>
+    </div>
+  </div>
+</div>
